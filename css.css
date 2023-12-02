@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+*{
+    color: white;
+}
+p {
+    
+    width: fit-content;
+    outline-style: solid;
+    outline-color: blue;
+}
