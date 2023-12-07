@@ -2,6 +2,7 @@ html, body{
     height: auto;
     width: auto;
     background-color: #171717;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #background-blob {
     height: 500px;
@@ -41,6 +42,8 @@ html, body{
 .timeTable{
     color: white;
     border: 1px solid white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -135,7 +138,7 @@ html, body{
   
   .button:hover {
     box-shadow: 1px 1px 200px #fff;
-    color: #333;
+    color: #171717;
     border: none;
   }
   
