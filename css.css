@@ -31,7 +31,39 @@ html, body{
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+/* ALL THE PLACEHOLDING COLORING */
+
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+#timerHour::-webkit-input-placeholder {
+  color: white;
+}
+/* Internet Explorer 10-11 */
+#timerHour:-ms-input-placeholder {
+  color: white;
+}
+/* Microsoft Edge */
+#timerHour::-ms-input-placeholder {
+  color: white;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+#timerMin::-webkit-input-placeholder {
+  color: white;
+}
+/* Internet Explorer 10-11 */
+#timerMin:-ms-input-placeholder {
+  color: white;
+} 
+/* Microsoft Edge */
+#timerMin::-ms-input-placeholder {
+  color: white;
+}
+
+/* ENDS HERE */
   
+
+
 .center{
     display: flex;
     justify-content: center;
@@ -39,6 +71,12 @@ html, body{
     margin-top: 2%;
     
 }
+
+.tableText{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .timeTable{
     color: white;
     border: 1px solid white;
@@ -92,16 +130,52 @@ html, body{
     border-left: solid white 0.1cap;
 }
 
+/* candle animation */
+
+ @keyframes slide {
+  0% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(100% 0 0 0); }
+  
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-47.5%); }
+  100% { transform: translateY(204.7%); }
+}
+
+#images{
+  margin: 10%;
+  
+}
+
+#candleBody {
+  position: absolute;
+  width: 136.17px;
+  animation: slide 5s forwards paused;
+  animation-timing-function: linear;
+}
+
+#candleFlame{
+  position: absolute;
+  width: 136.17px;
+  transform: translate(0%, -47.5%);
+  animation: slideDown 5s forwards paused;
+  animation-timing-function: linear;
+}
+
+.mask{
+  position: absolute;
+  margin-top: 500px;
+  width: 136.17px;
+  height: 150px;
+  background: #171717;
+  
+}
+
+
 
 /* button code starts here */
 
-
-/* all colors
-    border: #252525
-    button #333
-
-
-*/
 
 .button {
     height: 50px;
@@ -137,7 +211,7 @@ html, body{
   }
   
   .button:hover {
-    box-shadow: 1px 1px 200px #fff;
+    box-shadow: 1px 1px 5rem #fff;
     color: #171717;
     border: none;
   }

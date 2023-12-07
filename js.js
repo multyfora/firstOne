@@ -2,6 +2,8 @@ var start = document.getElementById("start");
 var stopTimeX = document.getElementById("stop");
 var timerHour = document.getElementById("timerHour");
 var timerMin = document.getElementById("timerMin");
+var candleBody = document.getElementById("candleBody");
+var candleFlame = document.getElementById("candleFlame");
 
 var t = 0;
 
@@ -26,24 +28,24 @@ timerHour.addEventListener('input', function() {
   });
 
 
-  timerHour.addEventListener('blur', function() {
-    if (this.value==""){
-        this.value = 0;
-       }
-  });
-  timerMin.addEventListener('blur', function() {
-    if (this.value==""){
-        this.value = 0;
-       }
-  });
+  // timerHour.addEventListener('blur', function() {
+  //   if (this.value==""){
+  //       this.value = 0;
+  //      }
+  // });
+  // timerMin.addEventListener('blur', function() {
+  //   if (this.value==""){
+  //       this.value = 0;
+  //      }
+  // });
   
 
 
 
 start.addEventListener('click', function() {
     startT();
-    timerHour.value = 0;
-    timerMin.value = 0;
+    timerHour.value = "";
+    timerMin.value = "";
 });
 
 stopTimeX.addEventListener('click', function() {
@@ -56,10 +58,16 @@ function startT() {
     var x = document.getElementById("inputGrid");
     hr = timerHour.value;
     min = timerMin.value;
-
-
+    candleBody.style.animation = '';
+    candleFlame.style.animation = '';
+    candleBody.style.animationPlayState = 'running';
+    candleFlame.style.animationPlayState = 'running';
+    candleBody.style.animationDuration = (hr*3600 + min*60) +'s';
+    candleFlame.style.animationDuration = (hr*3600 + min*60) +'s';
+    isStopped = false;
 
     window.t = hr*3600 + min*60;
+    
     window.per = window.t;
     //document.getElementById("demo").innerHTML = hr*3600 + min*60;
     timer();
@@ -81,27 +89,29 @@ function timer(){
     document.getElementById("seconds").innerHTML = s;
 
 
-    //document.getElementById("progress-bar").style.width = (temp*100)/(window.per) + "%";
+
 
     var t = setTimeout(timer,1000);
 
-    /*if(temp<900){
-        document.getElementById("progress-bar").style.backgroundColor = "red";
-        document.getElementById("progress").style.borderColor = "red";
-    }*/
+    // ending condition
     if (temp <= 0 || isStopped) {
         clearInterval(t);
         document.getElementById("hours").innerHTML = "00";
         document.getElementById("minutes").innerHTML = "00";
         document.getElementById("seconds").innerHTML = "00";
         alarm.play();
+        candleFlame.style.animation = "none";
+        candleBody.style.animation = "none";
         
     }
+
 }
 function checkTime(i){
     if (i<10) { i = "0" + i }
     return i;
 }
+
+//stop button func
 function stopTimer(){
     isStopped = true;
 }

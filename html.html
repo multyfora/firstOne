@@ -13,8 +13,8 @@
 
         <div id="inputGrid">
 
-            <input id="timerHour" class="input" type="number" value="0" min="0" max="23">
-            <input id="timerMin" class="input" type="number" value="0" min="0" max="59">
+            <input id="timerHour" class="input" type="number" placeholder="0" min="0" max="23">
+            <input id="timerMin" class="input" type="number" placeholder="0" min="0" max="59">
 
         </div>
 
@@ -28,9 +28,9 @@
                 </tr>
 
                 <tr>
-                    <td><center>&ensp;&ensp;&ensp; hours &ensp;&ensp;&ensp;</center></td>
-                    <td><center>&ensp;&ensp;&ensp; minutes &ensp;&ensp;&ensp;</center></td>
-                    <td><center>&ensp;&ensp;&ensp; seconds &ensp;&ensp;&ensp;</center></td>
+                    <td><center class="tableText"> hours </center></td>
+                    <td><center class="tableText"> minutes </center></td>
+                    <td><center class="tableText"> seconds </center></td>
                 </tr>
 
             </table>
@@ -47,7 +47,11 @@
         
 
         </div>
-
+        <div id="images">
+            <img id="candleBody" src="SVG/candleBody.svg" alt="candleBody">
+            <img id="candleFlame" src="SVG/candleFlame.svg" alt="candleFlame">
+            <div class="mask"></div>
+        </div>
         <script src="js.js"></script>
 
 
