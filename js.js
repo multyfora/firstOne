@@ -6,7 +6,7 @@ var timerMin = document.getElementById("timerMin");
 var t = 0;
 
 var isStopped = false;
-
+var alarm = new Audio('alarm.wav');
 
 //input
 
@@ -94,6 +94,8 @@ function timer(){
         document.getElementById("hours").innerHTML = "00";
         document.getElementById("minutes").innerHTML = "00";
         document.getElementById("seconds").innerHTML = "00";
+        alarm.play();
+        
     }
 }
 function checkTime(i){

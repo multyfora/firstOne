@@ -1,6 +1,7 @@
 html, body{
     height: auto;
     width: auto;
+    background-color: #171717;
 }
 #background-blob {
     height: 500px;
@@ -11,8 +12,17 @@ html, body{
     transform: translate(-50%, -50%);
     background: rgb(194,18,146);
     background: linear-gradient(216deg, rgba(194,18,146,1) 0%, rgba(113,29,176,1) 100%);
-    border-radius: 51% 49% 70% 30% / 33% 46% 54% 67%;
+
+    /* blob */
+    border-radius: 63% 37% 42% 58% / 42% 68% 32% 58%;
+
+    /* glow */
+    -webkit-box-shadow:0px 0px 68px 27px rgba(194,18,146,0.40);
+    -moz-box-shadow: 0px 0px 68px 27px rgba(194,18,146,0.40);
+    box-shadow: 0px 0px 68px 27px rgba(194,18,146,0.40);
   }
+
+    
   
   #all-inputs {
     position: absolute;
