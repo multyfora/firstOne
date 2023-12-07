@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>pupul</title>
+    <title>candle timer</title>
     <link rel="stylesheet" href="css.css">
 </head>
     <body>
 
-        <h1 id="a">bebra</h1>
-        <p class="heading">heading</p>
+        
+        <div id="background-blob"></div>
+        
+        <div id="all-inputs">
+
+        <div id="inputGrid">
+
+            <input id="timerHour" class="input" type="number" value="0" min="0" max="23">
+            <input id="timerMin" class="input" type="number" value="0" min="0" max="59">
+
+        </div>
+
+
+        <center class="center">
+            <table class="timeTable">
+                <tr style="font-size: 60px;">
+                    <td id="hours"><center>00</center></td>
+                    <td id="minutes"><center>00</center></td>
+                    <td id="seconds"><center>00</center></td>
+                </tr>
+
+                <tr>
+                    <td><center>&ensp;&ensp;&ensp; hours &ensp;&ensp;&ensp;</center></td>
+                    <td><center>&ensp;&ensp;&ensp; minutes &ensp;&ensp;&ensp;</center></td>
+                    <td><center>&ensp;&ensp;&ensp; seconds &ensp;&ensp;&ensp;</center></td>
+                </tr>
+
+            </table>
+            
+        </center>
+
+
+        <div class="buttons">
+        
+            <button id="start" class="button type1"><span class="btn-txt">Start</span></button>
+            <button id="stop" class="button type1"><span class="btn-txt">Stop</span></button>
+        
+        </div>
+        
+
+        </div>
+
+        <script src="js.js"></script>
+
 
     </body>
-    <script src="js.js"></script>
+    
 
 </html>
