@@ -2,8 +2,8 @@ var start = document.getElementById("start");
 var stopTimeX = document.getElementById("stop");
 var timerHour = document.getElementById("timerHour");
 var timerMin = document.getElementById("timerMin");
-var candleBody = document.getElementById("candleBody");
-var candleFlame = document.getElementById("candleFlame");
+// var candleBody = document.getElementById("candleBody");
+// var candleFlame = document.getElementById("candleFlame");
 
 var t = 0;
 
@@ -58,12 +58,8 @@ function startT() {
     var x = document.getElementById("inputGrid");
     hr = timerHour.value;
     min = timerMin.value;
-    candleBody.style.animation = '';
-    candleFlame.style.animation = '';
-    candleBody.style.animationPlayState = 'running';
-    candleFlame.style.animationPlayState = 'running';
-    candleBody.style.animationDuration = (hr*3600 + min*60) +'s';
-    candleFlame.style.animationDuration = (hr*3600 + min*60) +'s';
+
+
     isStopped = false;
 
     window.t = hr*3600 + min*60;
@@ -100,8 +96,6 @@ function timer(){
         document.getElementById("minutes").innerHTML = "00";
         document.getElementById("seconds").innerHTML = "00";
         alarm.play();
-        candleFlame.style.animation = "none";
-        candleBody.style.animation = "none";
         
     }
 
